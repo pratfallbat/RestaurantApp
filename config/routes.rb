@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  
+# /food_item => displays all food item
+# /food_item/123 => displays food item with id 123
+
+
+  resources :food_items
+
   get 'menu' =>'menu#index'
 
  get '/contact_us'  => 'welcome#contact_us'
