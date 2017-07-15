@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 # /food_item/new => create a new food item
 
 
-  resources :food_items
+  resources :food_items do
+#food_items/:food_items_id/orders/new
+	  resources :orders
+end
 
   get 'menu' =>'menu#index'
 
