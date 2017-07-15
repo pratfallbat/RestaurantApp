@@ -11,32 +11,46 @@
     </div>
   <% end %>
 
-  <div class="field">
+  
+  
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="well">
+       <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name, id: :food_item_name %>
+    <%= form.text_field :name, id: :food_item_name ,class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :food_item_description %>
+    <%= form.text_area :description, id: :food_item_description ,class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :price %>
-    <%= form.text_field :price, id: :food_item_price %>
+    <%= form.text_field :price, id: :food_item_price ,class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :section %>
-    <%= form.text_field :section, id: :food_item_section %>
+    <%= form.text_field :section, id: :food_item_section ,class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :food_item_image_url %>
+    <%= form.text_field :image_url, id: :food_item_image_url ,class: 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  
+    <%= form.submit 'Submit', class: 'btn btn-default' %>
+  
 <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+

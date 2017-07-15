@@ -1,4 +1,11 @@
 <h1>Eatify Menu</h1>
+<div class="btn-group" role="group" aria-label="Basic example">
+<% @sections.each do |section| %>
+<%= link_to section,menu_path(section: section),class: 'btn btn-secondary' %>
+
+  <% end %>
+  
+</div>
 
 
 <% @food_items.in_groups_of(3) do |group|  %>

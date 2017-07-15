@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 # /food_item => displays all food item
 # /food_item/123 => displays food item with id 123
+# /food_item/new => create a new food item
 
 
   resources :food_items
