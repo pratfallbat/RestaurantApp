@@ -1,12 +1,51 @@
-<h1>Eatify Menu</h1>
+<style type="text/css">
+.btn-success:hover {
+    color: blanchedalmond;
+    background-color: #4c594c;
+    border-color: black;
+}
+.btn-success {
+    color: #fff;
+    background-color: grey;
+    border-color: #5cb85c;
+    margin-left: 18%;
+}
+
+
+	
+	.text-center{	
+	
+	color:black;
+ 	font-weight: 400;
+ 	font-size: 350%;}
+
+ 	.btn-sucess{
+ 		margin-left: 20px;
+ 	}
+</style>
+
+
+
+</br>
+<h1 class="text-center">Eatify Menu</h1></br>
 <div class="btn-group" role="group" aria-label="Basic example">
 <% @sections.each do |section| %>
-<%= link_to section,menu_path(section: section),class: 'btn btn-secondary' %>
+
+<div class="col-md-6 col-offset-4">
+<div class="well">
+<div class="text-center">
+<%= link_to section,menu_path(section: section),class: 'btn btn-success' %>
+</div>
+</div>
+</div>
+
+
 
   <% end %>
   
 </div>
-
+</div>
+</br></br>
 
 <% @food_items.in_groups_of(3) do |group|  %>
 <div class="row">
@@ -24,8 +63,11 @@
 						  </div>
 					</div>
 			</div>
+
 			 <% end %>			
+
 </div>
+</br>
 
 
 
