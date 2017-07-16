@@ -2,15 +2,64 @@
 .btn-success:hover {
     color: blanchedalmond;
     background-color: #4c594c;
-    border-color: black;
+        border-color: #ccc;
+border-width: 1px;
+
 }
 .btn-success {
     color: #fff;
     background-color: grey;
-    border-color: #5cb85c;
+    border-color: #ccc;
+
+border-width: 1px;
+
     margin-left: 18%;
 }
+.btn-secondary:hover {
+    color: #292b2c;
+    background-color: #e05b2f;
+    border-color: #ccc;
+    border-width: 1.5px;
+}
+
  
+ .texty {
+    
+    text-align: center;
+    text-shadow: initial;
+    color: #782525;
+    font-weight: 200;
+    font-size: 200%;
+    margin-bottom: 0px;
+    font-style: oblique;
+    font-weight: bold;
+}
+.textytwo {
+    margin-top: 2%;
+    text-align: center;
+    text-shadow: initial;
+    color: black;
+    font-weight: 100;
+    font-size: 100%;
+    
+    font-style: oblique;
+    font-weight: bold;
+}
+.btn-secondary:hover {
+    color: #292b2c;
+    background-color: #e05b2f;
+    border-color: #030303;
+    border-width: 1px;
+}
+
+
+	
+
+p {
+    margin-top: 8;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
 
 	
 	.text-center{	
@@ -51,16 +100,25 @@
 <div class="row">
 <% group.compact.each do |food_item| %>
 			<div class="col-sm-4">
-					<div class="card" style="width: 20rem;">
+					<div class="card" style="width: 23rem;">
 					  <%= image_tag food_item.image_url_or_default , alt: food_item.name %>
+					  
+
 						  <div class="card-block">
-						    <h4 class="card-title"><%= food_item.name %></h4>
+						    <h4 class="card-title">
+						   <h3 class="texty"> <%= food_item.name %></h3>
+						   </br>
+						   
+						   </br>
+						    		
+						    </h4>
+						   
 						    <p class="card-text"><%= food_item.description %></p>
+						    <h5 class="textytwo"> ORDER PLACED: <span class="label label-default"><%= food_item.orders.size %></span></h5>
+						   </br><a href="#" class="btn btn-secondary">orders</a></p>
 						  </div>
 							 
-						  <div class="card-block">
-						    <a href="#" class="btn btn-secondary">Order</a>
-						  </div>
+						 
 					</div>
 			</div>
 
